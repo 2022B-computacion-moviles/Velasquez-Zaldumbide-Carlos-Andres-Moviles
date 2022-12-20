@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "646035031747",
-    "project_id": "movcomp-cavz",
-    "storage_bucket": "movcomp-cavz.appspot.com"
+    "project_number": "577821942732",
+    "project_id": "movcompcavz",
+    "storage_bucket": "movcompcavz.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:646035031747:android:51ab23971ed8031cf80476",
+        "mobilesdk_app_id": "1:577821942732:android:f0bf6878182d30db563369",
         "android_client_info": {
           "package_name": "com.example.movcompcavz"
         }
       },
       "oauth_client": [
         {
-          "client_id": "646035031747-beu4v9cqjmollspatdnsubgfhd4gg90r.apps.googleusercontent.com",
+          "client_id": "577821942732-qv9p14vbojm5008f60vgrdmfeerhmn9b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAyCNZ79lxmmGvhbuAtDyLjA3PXBYYtKL0"
+          "current_key": "AIzaSyCWpAvZHCE-f2suLoLzGsleQ0ZxRNaCgQs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "646035031747-beu4v9cqjmollspatdnsubgfhd4gg90r.apps.googleusercontent.com",
+              "client_id": "577821942732-qv9p14vbojm5008f60vgrdmfeerhmn9b.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

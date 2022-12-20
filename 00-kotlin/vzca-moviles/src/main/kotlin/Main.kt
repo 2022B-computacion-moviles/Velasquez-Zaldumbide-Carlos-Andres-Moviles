@@ -1,12 +1,12 @@
 fun main(args: Array<String>) {
-    /*println("Hello World!")
+    println("Hello World!")
     //Tipos de variables
     //Inmutables (no re asignar)
     val inmutable: String="Carlos";//nos puede servir como constante
     //inmutable="Velasquez"//no su puede hacer esto
     //Mutables (re asignar)
     val mutable: String="Carlos";
-    mutable="Velasquez"
+    //mutable="Velasquez"
 
     //val > vars
 
@@ -32,7 +32,7 @@ fun main(args: Array<String>) {
         "C"->println("Casado")
         else->println("Desconocido")
     }
-    val coqueto=if(estadoCivilWhen=="S") "Si" else "No"*/
+    val coqueto=if(estadoCivilWhen=="S") "Si" else "No"
 
     /*val sumaUno=Suma(1,2)
     val sumaDos=Suma(1,null)
