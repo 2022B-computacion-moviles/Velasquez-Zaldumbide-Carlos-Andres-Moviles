@@ -72,4 +72,21 @@ class ACicloVida : AppCompatActivity() {
             .setAction("Action",null).show()
     }
 
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        outState.run{
+            putString("textoGuardado",textoGlobal)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        val textoRecuperado:String?=savedInstanceState.getString("textoGuardado")
+        if(textoRecuperado!=null){
+            mostrarSnackbar(textoRecuperado)
+            textoGlobal=textoRecuperado
+        }
+
+    }
+
 }
