@@ -1,3 +1,4 @@
+/*Programa CRUD (Create Read Update Delete). Para las entidades Papeleria-Producto.*/
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -24,7 +25,6 @@ fun main(args: Array<String>) {
             }
             (2)->{
                 //VER
-                println("\nLos datos son los siguientes:")
                 verDatos(fileName[opcionEntidades(bandera)-1])
             }
             (3)->{
@@ -68,7 +68,7 @@ fun main(args: Array<String>) {
                     }
                     var aux=0
                     do{
-                        println("Desea seguir modificando (s/n): ")
+                        print("\nDesea seguir modificando (s/n): ")
                         val conf= readln()
                         when(conf){
                             ("s"),("S")->{
@@ -289,7 +289,7 @@ fun actualizarDato(file:String,indice:Int,opcionAux:Int):Unit{
         e.printStackTrace()
     }
     //Se obtiene los datos acorde al indice ingresado
-    val str=line.get(indice-1)
+    val str=line.get(obtenerIndiceParaEliminar(file,indice))
     println("Los datos a actualizar son:")
     val delim=","
     val lista= str.split(delim).toMutableList()
@@ -330,7 +330,7 @@ fun actualizarDato(file:String,indice:Int,opcionAux:Int):Unit{
                             }
                             i++
                         }
-                        line.set(indice-1,nuevo)
+                        line.set(obtenerIndiceParaEliminar(file,indice),nuevo)
                         var salida=""
                         for(j in line){
                             salida+=j+"\n"
@@ -391,7 +391,7 @@ fun actualizarDato(file:String,indice:Int,opcionAux:Int):Unit{
                                     }
                                     i++
                                 }
-                                line.set(indice-1,nuevo)
+                                line.set(obtenerIndiceParaEliminar(file,indice),nuevo)
                                 var salida=""
                                 for(j in line){
                                     salida+=j+"\n"
@@ -418,7 +418,7 @@ fun actualizarDato(file:String,indice:Int,opcionAux:Int):Unit{
                                 }
                                 i++
                             }
-                            line.set(indice-1,nuevo)
+                            line.set(obtenerIndiceParaEliminar(file,indice),nuevo)
                             var salida=""
                             for(j in line){
                                 salida+=j+"\n"
@@ -437,19 +437,35 @@ fun actualizarDato(file:String,indice:Int,opcionAux:Int):Unit{
             }while(opc<=0 || opc>=lista.size)
         }
     }
-
-
-
 }
-
-//******************FUNCIONES PARA VERIFICAR QUE EXISTA EL INDICE DENTRO DEL TXT******************
-fun verificarIndice(file:String,indiceEliminar:Int):Boolean{
+fun obtenerIndiceParaEliminar(file:String, indice:Int):Int{
+    var i=0
     try {
         val sc = Scanner(File(file))
         while (sc.hasNextLine()) {
             var aux=sc.nextLine()
             if(aux!=""){
-                if(aux[0].toString().toInt()==indiceEliminar){
+                if(aux[0].toString().toInt()==indice){
+                    return i
+                }
+                i++
+            }
+        }
+    } catch (e: IOException) {
+        e.printStackTrace()
+    }
+    println("No existe ese indice, ingrese de nuevo")
+    return -1
+}
+
+//******************FUNCIONES PARA VERIFICAR QUE EXISTA EL INDICE DENTRO DEL TXT******************
+fun verificarIndice(file:String, indice:Int):Boolean{
+    try {
+        val sc = Scanner(File(file))
+        while (sc.hasNextLine()) {
+            var aux=sc.nextLine()
+            if(aux!=""){
+                if(aux[0].toString().toInt()==indice){
                     return true
                 }
             }
@@ -460,3 +476,4 @@ fun verificarIndice(file:String,indiceEliminar:Int):Boolean{
     println("No existe ese indice, ingrese de nuevo")
     return false
 }
+
