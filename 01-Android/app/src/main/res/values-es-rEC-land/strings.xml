@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hola_mundo">Hola mundo land mensaje horizontal</string>
+    <color name="color_hola_mundo">#FFEB3B</color>
+    <color name="color_fondo">#1864D6</color>
+</resources>

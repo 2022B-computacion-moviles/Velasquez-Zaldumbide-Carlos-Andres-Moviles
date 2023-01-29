@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovCompCAVZ</string>
+    <string name="hola_mundo">Hola mundo port con texto diferente</string>
+    <color name="color_hola_mundo">#97232D</color>
+    <color name="color_fondo">#4BD618</color>
+</resources>

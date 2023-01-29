@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MovCompCAVZ</string>
+    <string name="hola_mundo" translatable="false">Hello word port color green</string>
+    <color name="color_hola_mundo">#4C9723</color>
+    <color name="color_fondo">#D6C318</color>
+</resources>

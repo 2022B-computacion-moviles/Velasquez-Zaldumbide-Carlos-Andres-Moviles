@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "391201914299",
+    "project_id": "movcompcavz-10185",
+    "storage_bucket": "movcompcavz-10185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391201914299:android:2c1a81e4636b43e20a989e",
+        "android_client_info": {
+          "package_name": "com.example.movcompcavz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391201914299-r6u08ks442jb3qgei4jmqgqj4ueb4vvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8bkzy5APi17g8xBXfuft-FF5I7WI5Rdw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391201914299-r6u08ks442jb3qgei4jmqgqj4ueb4vvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
