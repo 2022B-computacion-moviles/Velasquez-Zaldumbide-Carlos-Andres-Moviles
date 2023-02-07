@@ -81,10 +81,19 @@ class MainActivity : AppCompatActivity() {
             .setOnClickListener {
                 abrirActividadConParametros(CIntentExplicitoParametros::class.java)
             }
+        val botonCrudEntrenador = findViewById<Button>(R.id.btn_sqlite)
+        botonCrudEntrenador
+            .setOnClickListener{
+                irActividad(ECrudEntrenador::class.java)
+            }
+        val botonGmaps= findViewById<Button>(R.id.btn_google_maps)
+        botonGmaps
+            .setOnClickListener{
+                irActividad(HGoogleMaps::class.java)
+            }
     }
     fun abrirActividadConParametros(
         clase: Class<*>,
-
         ){
         val intentExplicito = Intent(this, clase)
         //Enviar parametros (solamente variables primitivas
