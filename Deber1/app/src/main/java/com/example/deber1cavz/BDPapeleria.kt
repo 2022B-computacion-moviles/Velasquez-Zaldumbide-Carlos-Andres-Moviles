@@ -44,10 +44,6 @@ class BDPapeleria(
     }
 
     override fun toString() : String{
-        val salida="id: ${id_papeleria}\n"+
-                "nombre: ${nombre_papeleria}\n"+
-                "ubicacion: ${direccion}\n"+
-                "telefono: ${telefono}\n"
-        return salida
+        return "${nombre_papeleria}"
     }
 }

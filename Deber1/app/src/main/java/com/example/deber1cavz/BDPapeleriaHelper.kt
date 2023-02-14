@@ -112,6 +112,7 @@ class BDPapeleriaHelper(context: Context?) : SQLiteOpenHelper(
         values.put("fecha_fundacion", fecha_fundacion)
         return baseDatosLectura.update("PAPELERIA", values, "id_papeleria="+id, null)
     }
+
     //ELIMINAR PAPELERIA
     fun eliminarPapeleria(id: Int?): Int{
         val baseDatosLectura = readableDatabase
@@ -122,21 +123,21 @@ class BDPapeleriaHelper(context: Context?) : SQLiteOpenHelper(
     //INSERTAR PRODUCTO
     fun insertarProducto(
         idPapeleriaPro: Int,
-        nombre_papeleria: String,
-        direccion: String,
-        telefono: Int?,
-        fecha_fundacion: String,
+        nombre_producto: String,
+        stock: Int?,
+        precio: Float,
+        disponibilidad: Boolean
     ): Long {
         val baseDatosLectura = readableDatabase
-
         val values: ContentValues = ContentValues()
-        values.put("nombre_papeleria", nombre_papeleria)
-        values.put("direccion", direccion)
-        values.put("telefono", telefono)
-        values.put("fecha_fundacion", fecha_fundacion)
+        values.put("nombre_producto", nombre_producto)
+        values.put("stock", stock)
+        values.put("precio", precio)
+        values.put("disponible", disponibilidad)
         values.put("id_Papeleria", idPapeleriaPro)
         return baseDatosLectura.insert("PRODUCTO", null, values)
     }
+
     //VER PRODUCTO
     fun verProductos(id: Int):ArrayList<BDProducto>{
         val baseDatosLectura = readableDatabase
@@ -157,5 +158,31 @@ class BDPapeleriaHelper(context: Context?) : SQLiteOpenHelper(
         }
         cursor.close()
         return salida
+    }
+
+    //ACTUALIZAR PRODUCTO
+    fun actualizarProducto(
+        idProducto: Int,
+        idPapeleriaPro: Int,
+        nombre_producto: String,
+        stock: Int?,
+        precio: Float,
+        disponibilidad: Boolean
+    ): Int {
+        val baseDatosLectura = readableDatabase
+
+        val values: ContentValues = ContentValues()
+        values.put("nombre_producto", nombre_producto)
+        values.put("stock", stock)
+        values.put("precio", precio)
+        values.put("disponible", disponibilidad)
+        values.put("id_Papeleria", idPapeleriaPro)
+        return baseDatosLectura.update("PRODUCTO", values, "id_producto="+idProducto, null)
+    }
+
+    //ELIMINAR PRODUCTO
+    fun eliminarProducto(id: Int?): Int{
+        val baseDatosLectura = readableDatabase
+        return baseDatosLectura.delete("PRODUCTO", "id_producto="+id, null)
     }
 }

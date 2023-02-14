@@ -45,10 +45,6 @@ class BDProducto(
         }
     }
     override fun toString() : String{
-        val salida="id: ${id_producto}\n"+
-                "nombre: ${nombre_producto}\n"+
-                "pecio: ${precio}\n"+
-                "disponible: ${disponible}\n"
-        return salida
+        return "${nombre_producto}"
     }
 }

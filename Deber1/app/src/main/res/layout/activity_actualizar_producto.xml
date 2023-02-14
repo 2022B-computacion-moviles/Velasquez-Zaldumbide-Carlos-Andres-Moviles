@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actualizarProducto">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_act_nombre_pro"
+        android:layout_width="306dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="152dp"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/input_act_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Stock"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_act_nombre_pro"
+        app:layout_constraintStart_toStartOf="@+id/input_act_nombre_pro"
+        app:layout_constraintTop_toBottomOf="@+id/input_act_nombre_pro" />
+
+    <EditText
+        android:id="@+id/input_act_precio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Precio"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_act_stock"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_act_stock"
+        app:layout_constraintTop_toBottomOf="@+id/input_act_stock" />
+
+    <EditText
+        android:id="@+id/input_id_papeleria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="IdPapeleria"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_act_precio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/input_act_precio"
+        app:layout_constraintTop_toBottomOf="@+id/input_act_precio" />
+
+    <Button
+        android:id="@+id/btn_actualizar_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_id_papeleria"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/input_id_papeleria"
+        app:layout_constraintTop_toBottomOf="@+id/input_id_papeleria"
+        app:layout_constraintVertical_bias="0.073" />
+</androidx.constraintlayout.widget.ConstraintLayout>
