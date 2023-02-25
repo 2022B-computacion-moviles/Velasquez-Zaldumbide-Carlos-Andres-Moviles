@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    tools:context=".tusCanalesVivo">
+
+    <ImageView
+        android:id="@+id/captura_video"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/diapositiva1" />
+
+    <ImageView
+        android:id="@+id/imagen_streamer"
+        android:layout_width="25dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/captura_video"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_nombre_streamer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imagen_streamer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tituloStream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/captura_video"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nombre_streamer" />
+
+    <TextView
+        android:id="@+id/tv_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/captura_video"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tituloStream" />
+
+    <Button
+        android:id="@+id/btn_Explorar"
+        android:layout_width="66dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bordes_redondos"
+        android:backgroundTint="@null"
+        android:text="Español"
+        android:textAllCaps="false"
+        android:textColor="#020202"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/captura_video"
+        app:layout_constraintTop_toBottomOf="@+id/tv_categoria" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

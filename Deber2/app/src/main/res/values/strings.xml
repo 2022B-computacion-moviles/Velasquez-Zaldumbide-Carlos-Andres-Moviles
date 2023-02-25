@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Twitch</string>
+    <string name="title_activity_menu_inferior">Menu_inferior</string>
+    <string name="title_home">Siguiendo</string>
+    <string name="title_dashboard">Descubrir</string>
+    <string name="title_notifications">Explorar</string>
+    <string name="title_buscar">Buscar</string>
+    <string name="title_activity_pestanas">Pestanas</string>
+    <string name="tab_text_1">Tab1</string>
+    <string name="tab_text_2">Tab2</string>
+</resources>

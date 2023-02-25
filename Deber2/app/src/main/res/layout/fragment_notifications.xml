@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.notifications.NotificationsFragment" >
+
+    <ImageButton
+        android:id="@+id/id_avatar_usuario"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bordes_redondos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/id_notificaciones"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#00FFFFFF"
+        android:src="@drawable/icono_notificaciones"
+        app:layout_constraintStart_toEndOf="@+id/id_avatar_usuario"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/id_susurros"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toEndOf="@+id/id_notificaciones"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icono_susurros" />
+
+    <Button
+        android:id="@+id/id_crear"
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bordes_redondos"
+        android:drawableStart="@drawable/icono_stream"
+        android:drawablePadding="-15dp"
+
+        android:letterSpacing="0.1"
+        android:paddingStart="15dp"
+        android:text="Crear"
+        android:textAllCaps="false"
+        android:textColor="#020202"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/id_susurros"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Explorar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:letterSpacing="0.03"
+        android:text="Explorar"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCategorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/subrayado"
+        android:paddingBottom="10dp"
+        android:text="Categorias"
+        android:textColor="#A970FF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Explorar" />
+
+    <TextView
+        android:id="@+id/tvCanalesVivo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Canales en vivo"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tvCategorias"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Explorar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_categorias"
+        android:layout_width="357dp"
+        android:layout_height="496dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCategorias"
+        tools:layout_editor_absoluteX="1dp"
+        tools:listitem="@layout/activity_explorar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
