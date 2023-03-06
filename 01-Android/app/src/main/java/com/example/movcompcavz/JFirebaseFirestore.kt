@@ -100,6 +100,11 @@ class JFirebaseFirestore : AppCompatActivity() {
     }
 
     fun guardarQuery(documentSnapshots: QuerySnapshot, refCities: Query) {
+        if (documentSnapshots.size() > 0) {
+            val ultimoDocumento = documentSnapshots.documents[documentSnapshots.size() - 1]
+            query = refCities
+                .startAfter(ultimoDocumento)
+        }
     }
 
     fun eliminarRegistro(){
