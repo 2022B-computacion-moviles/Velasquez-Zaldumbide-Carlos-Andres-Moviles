@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414941945766",
+    "project_id": "exameniib-9a90d",
+    "storage_bucket": "exameniib-9a90d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414941945766:android:2756353658ef74620e7967",
+        "android_client_info": {
+          "package_name": "com.example.cavzexameniib"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414941945766-v35r7oqc47q8pec3d1eld0pqqf8k4bgl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD58o59za4n-RTn2SIu-ywWvTyIjasiwmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414941945766-v35r7oqc47q8pec3d1eld0pqqf8k4bgl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
