@@ -22,8 +22,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //FirebaseApp.initializeApp(this);
-
         //Funcion que muestra en el list view las papelerias
         verListaPapelerias()
 
